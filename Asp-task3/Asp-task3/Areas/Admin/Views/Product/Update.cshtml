@@ -1,0 +1,31 @@
+﻿@using Asp_task3.Areas.Admin.Models.Shop
+@model ProductUpdateVM
+
+<form method="post" asp-action="Update" asp-controller="Product">
+    <div class="form-group">
+        <label asp-for="Title"></label>
+        <input asp-for="Title" class="form-control" placeholder="Enter product title" />
+        <span asp-validation-for="Title" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Size"></label>
+        <input asp-for="Size" class="form-control" placeholder="Enter product size" />
+        <span asp-validation-for="Size" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Price"></label>
+        <input asp-for="Price" class="form-control" placeholder="Enter product price" />
+        <span asp-validation-for="Price" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="PhotoPath"></label>
+        <input asp-for="PhotoPath" class="form-control" placeholder="Enter photo path" />
+        <span asp-validation-for="PhotoPath" class="text-danger"></span>
+    </div>
+
+
+    <button type="submit" class="btn btn-primary">Update</button>
+</form>
